@@ -1,0 +1,75 @@
+@startuml FinalProject
+
+class Restaurant {
+    -MENU_FILE_PATH: String
+    -RESTAURANT_DETAILS_FILE_PATH: String
+    -name: String
+    -owner: String
+    -menuItems: Map<String, List<MenuItem>>
+    +Restaurant()
+    +loadMenuItems()
+    +loadRestaurantDetails()
+    +printMenu()
+    +isMenuItemExists(itemName: String): boolean
+}
+
+class MenuItem {
+    -name: String
+    -category: String
+    -price: double
+    +MenuItem(name: String, category: String, price: double)
+}
+
+class User {
+    - username: String
+    - password: String
+    - cart: List<MenuItem>
+    - ORDER_DATA_FILE_PATH: String
+    + User(username: String, password: String)
+    + User()
+    + getUsername(): String
+    + getPassword(): String
+    + getCart(): ArrayList<MenuItem>
+    + setUsername(username: String): void
+    + setPassword(password: String): void
+    + addToCart(): void
+    + removeFromCart(): void
+    + displayCartOrder(): void
+    + writeCartToFile(): void
+    + loadCartFromFile(): void
+    }
+
+class Owner extends User {
+    - ORDER_DATA_FILE_PATH: String
+    - username: String
+    - password: String
+    + Owner()
+    + Owner(username: String, password: String)
+    + getUsername(): String
+    + getPassword(): String
+    + setUsername(username: String): void
+    + setPassword(password: String): void
+    + displayOrderHistory(): void
+    + displayOwnerMenu(): void
+}
+
+class App {
+    -CRED_FILE_PATH: String
+    -users: Map<String, String>
+    -restaurant: Restaurant
+    -s: Scanner
+    +main(args: String[])
+    +loadUsersFromFile(): Map<String, String>
+    +registerNewUser(): User
+    +loginExistingUser(): User
+    +clearConsole()
+}
+
+Restaurant --* MenuItem: Contains
+User --* MenuItem: Contains
+User --> Restaurant
+App --> Restaurant: Has
+App --> User: Has
+App --> Owner: Has
+
+@enduml

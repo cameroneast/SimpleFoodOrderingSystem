@@ -1,0 +1,11 @@
+User: ajaykarsh
+Your order:
+---------------
+Appetizers:
+Entrees:
+Drinks:
+Sides:
+Coleslaw - $2.99
+---------------
+Order Total:
+2.99

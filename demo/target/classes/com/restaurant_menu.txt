@@ -1,0 +1,27 @@
+Appetizers:
+Stuffed Jalapenos - 4.99
+Loaded Baked Potato - 4.99
+Fried Pickles - 5.99
+
+Entrees:
+Big ol' Hamburger - 11.99
+Big ol' Cheeseburger - 12.99
+BBQ Bacon Burger - 13.99
+Chicken Sandwich - 11.99
+BLT Sandwich - 10.99
+Fish Filet Sandwich - 11.99
+
+Sides:
+Fries - 2.99
+Coleslaw - 2.99
+Baked Potato - 2.99
+Green Beans - 2.99
+Mashed Potatoes - 2.99
+Mixed Fruit - 2.99
+
+Drinks:
+Water - 0.00
+Soda - 1.99
+Beer - 2.99
+Tea - 1.99
+Wine - 3.99
